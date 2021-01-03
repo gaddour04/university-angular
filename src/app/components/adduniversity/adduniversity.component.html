@@ -1,0 +1,55 @@
+<div class="wrapper ">
+    <app-sidebar></app-sidebar>
+     <div class="main-panel">
+       <!-- Navbar -->
+      <app-topbar></app-topbar>
+      <div class="content">
+<h1>add University</h1> 
+<form class="user" [formGroup]="universityForm" (ngSubmit)="addUniversity()">
+    <div class="form-group">
+        <input type="text" class="form-control form-control-user"
+            id="exampleInputEmail" aria-describedby="emailHelp"
+            placeholder="name" formControlName="name">
+            <small class="text-danger" *ngIf="universityForm.get('name')?.touched && universityForm.get('name')?.invalid">Name is required</small>
+    </div>
+   
+    <div class="form-group">
+        <textarea class="form-control form-control-user"
+        id="exampleInputEmail" aria-describedby="emailHelp"
+        placeholder="description" formControlName="description" cols="30" rows="10"></textarea>
+        <small class="text-danger" *ngIf="universityForm.get('description')?.touched && universityForm.get('description')?.invalid">Description is required</small>
+    </div>
+    <div class="form-group">
+        <input type="text"  class="form-control form-control-user"
+            id="exampleInputEmail" aria-describedby="emailHelp"
+            placeholder="url image" formControlName="image">
+            <small class="text-danger" *ngIf="universityForm.get('image')?.touched && universityForm.get('image')?.invalid">Image is required</small>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control form-control-user"
+            id="exampleInputEmail" aria-describedby="emailHelp"
+            placeholder="url" formControlName="url">
+            <small class="text-danger" *ngIf="universityForm.get('url')?.touched && universityForm.get('url')?.invalid">Url is required</small>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control form-control-user"
+            id="exampleInputEmail" aria-describedby="emailHelp"
+            placeholder="localistation" formControlName="localisation">
+            <small class="text-danger" *ngIf="universityForm.get('localisation')?.touched && universityForm.get('localisation')?.invalid">Localisation is required</small>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control form-control-user"
+            id="exampleInputEmail" aria-describedby="emailHelp"
+            placeholder="prix" formControlName="prix">
+            <small class="text-danger" *ngIf="universityForm.get('prix')?.touched && universityForm.get('prix')?.invalid">Prix is required</small>
+    </div>
+    
+   
+    
+    <button type="submit" [disabled]="universityForm.invalid" class="btn btn-primary ">
+        add
+    </button>
+    
+</form>
+
+

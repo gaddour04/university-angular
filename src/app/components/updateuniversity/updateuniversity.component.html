@@ -1,0 +1,60 @@
+<div class="wrapper ">
+<app-sidebar></app-sidebar>
+<div class="main-panel">
+    <!-- Navbar -->
+   <app-topbar></app-topbar>
+   <div class="content">
+<form class="user" [formGroup]="universityForm" (ngSubmit)="UpdateUniversity()">
+    <div class="form-group">
+        <label for="">Name :</label>
+        <input type="text" class="form-control form-control-user"
+            id="exampleInputEmail" aria-describedby="emailHelp"
+            placeholder="name" formControlName="name"  [ngModel]="data.name">
+            <small class="text-danger" *ngIf="universityForm.get('name')?.touched && universityForm.get('name')?.invalid">Name is required</small>
+    </div>
+    <div class="form-group">
+       <label for="Description">Description :</label>
+            <textarea  class="form-control form-control-user"
+            id="exampleInputEmail" aria-describedby="emailHelp"
+            placeholder="description" formControlName="description" [ngModel]="data.description" cols="30" rows="10"></textarea>
+            <small class="text-danger" *ngIf="universityForm.get('description')?.touched && universityForm.get('description')?.invalid">Description is required</small>
+    </div>
+    <div class="form-group">
+        <label for="">Image :</label>
+        <input type="text"  class="form-control form-control-user"
+            id="exampleInputEmail" aria-describedby="emailHelp"
+            placeholder="url image" formControlName="image" [ngModel]="data.image">
+            <small class="text-danger" *ngIf="universityForm.get('image')?.touched && universityForm.get('image')?.invalid">Image is required</small>
+    </div>
+    <div class="form-group">
+        <label for="">Site officiel :</label>
+        <input type="text" class="form-control form-control-user"
+            id="exampleInputEmail" aria-describedby="emailHelp"
+            placeholder="url" formControlName="url" [ngModel]="data.url">
+            <small class="text-danger" *ngIf="universityForm.get('url')?.touched && universityForm.get('url')?.invalid">Url is required</small>
+    </div>
+    <div class="form-group">
+        <label for="">Localisation</label>
+        <input type="text" class="form-control form-control-user"
+            id="exampleInputEmail" aria-describedby="emailHelp"
+            placeholder="localistation" formControlName="localisation" [ngModel]="data.localisation">
+            <small class="text-danger" *ngIf="universityForm.get('localisation')?.touched && universityForm.get('localisation')?.invalid">Localisation is required</small>
+    </div>
+    <div class="form-group">
+        <label for="">Prix</label>
+        <input type="text" class="form-control form-control-user"
+            id="exampleInputEmail" aria-describedby="emailHelp"
+            placeholder="prix" formControlName="prix" [ngModel]="data.prix">
+            <small class="text-danger" *ngIf="universityForm.get('prix')?.touched && universityForm.get('prix')?.invalid">Prix is required</small>
+    </div>
+    
+   
+    
+    <button type="submit" [disabled]="universityForm.invalid" class="btn btn-primary ">
+        add
+    </button>
+    
+</form>
+</div>
+
+

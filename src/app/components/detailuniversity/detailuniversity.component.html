@@ -1,0 +1,483 @@
+
+    <header class="header_inner ">
+    <!-- Preloader -->
+      
+        <app-navbar></app-navbar>>
+    
+      
+    
+        <div class="intro_wrapper">
+            <div class="container">  
+                <div class="row">        
+                     <div class="col-sm-12 col-md-8 col-lg-8">
+                        <div class="intro_text">
+                            <h1>Courses Details</h1>
+                            <div class="pages_links">
+                                <a href="#" title="">Home</a>
+                                <a href="#" title="">Course</a>
+                                <a href="#" title="" class="active">Course Details</a>
+                            </div>
+                        </div>
+                    </div>              
+    
+                </div>
+            </div> 
+        </div> 
+    </header> <!-- End header -->
+    
+    
+    
+    <section class="login_signup_option">
+        <div class="l-modal is-hidden--off-flow js-modal-shopify">
+            <div class="l-modal__shadow js-modal-hide"></div>
+            <div class="login_popup login_modal_body">
+                <div class="Popup_title d-flex justify-content-between">
+                    <h2 class="hidden">&nbsp;</h2>
+                    <!-- Nav tabs -->
+                    <div class="row">
+                        <div class="col-12 col-lg-12 col-md-12 col-lg-12 login_option_btn">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#login" role="tab">Login</a></li>
+                                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#panel2" role="tab">Register</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-lg-12 col-md-12 col-lg-12">
+                            <!-- Tab panels -->
+                            <div class="tab-content card">
+                                <!--Login-->
+                                <div class="tab-pane fade in show active" id="login" role="tabpanel">
+                                    <form action="#">
+                                        <div class="row">
+                                            <div class="col-12 col-lg-12 col-md-12 col-lg-12">
+                                                <div class="form-group">
+                                                    <label class="control-label">Email</label>
+                                                    <input type="email" class="form-control" placeholder="Username">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-12 col-md-12 col-lg-12">
+                                                <div class="form-group">
+                                                    <label class="control-label">Password</label>
+                                                    <input type="password" class="form-control" placeholder="Password">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-lg-12 col-md-12 col-lg-12 d-flex justify-content-between login_option">
+                                                <a href="forgot-password.html" title="" class="forget_pass">Forget Password ?</a>
+                                                <button type="submit" class="btn btn-default login_btn">Login</button>
+                                            </div> 
+                                            <div class="col-12 col-lg-12 col-md-12 col-lg-12">
+                                                <div class="social_login">
+                                                    <div class="social_items">
+                                                        <button class="google_login google">Login Google</button>
+                                                        <button class="google_login facebook">Login Facebook</button>
+                                                        <button class="google_login twitter">Login Twitter</button>
+                                                        <button class="google_login linkdin">Login Linkdin</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!--/.Panel 1-->
+                                <!--Panel 2-->
+                                <div class="tab-pane fade" id="panel2" role="tabpanel">
+                                    <form action="#" class="register">
+                                        <div class="row">
+                                            <div class="col-12 col-lg-12 col-md-12 col-lg-12">
+                                                <div class="form-group">
+                                                    <label  class="control-label">Name</label>
+                                                    <input type="text" class="form-control" placeholder="Username">
+                                                </div>
+                                            </div>                                        
+                                            <div class="col-12 col-lg-12 col-md-12 col-lg-12">
+                                                <div class="form-group">
+                                                    <label  class="control-label">Email</label>
+                                                    <input type="email" class="form-control" placeholder="Email">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-12 col-md-12 col-lg-12">
+                                                <div class="form-group">
+                                                    <label  class="control-label">Password</label>
+                                                    <input type="password" class="form-control" placeholder="Password">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-lg-12 col-md-12 col-lg-12 d-flex justify-content-between login_option">
+                                                <button type="submit" class="btn btn-default login_btn">Register</button>
+                                            </div> 
+                                        </div>
+                                    </form>
+                                </div><!--/.Panel 2-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>  <!-- End Login Signup Option -->
+    
+    
+    
+    
+    <section class="blog_wrapper" id="courses_details_wrapper">
+        <div class="container">  
+            <div class="row">        
+                <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+                    <div class="courses_details">
+                        <div class="single-curses-contert">
+                            <h2>{{data.name}}</h2>
+                           
+                            <div class="details-img-bxo">
+                                <img src="{{data.image}}" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="courses_tab_wrapper">  
+                            <div class="courses_details_nav_tabs">     
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li class="nav-item"><a class="nav-link active" href="#information" role="tab" data-toggle="tab">Information</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#curricularm" role="tab" data-toggle="tab">Diplomes délivrés</a></li>
+                                    
+                                    <li class="nav-item"><a class="nav-link" href="#reviews" role="tab" data-toggle="tab">Reviews</a></li>
+                                </ul>
+                            </div>   
+    
+                            <!-- Tab panes -->
+                            <div class="tab_contents tab-content">
+                                <div role="tabpanel" class="tab-pane fade in active show" id="information">
+                                    <h5>Description <span>:</span></h5>
+                                    {{data.description}}
+                                    <h5>Adresse <span>:</span></h5>
+                                    {{data.localisation}}
+                                    <h5>Site Officiel <span>:</span></h5>
+                                    <a href="{{data.url}}" target="_blank">{{data.url}}</a>
+                                    
+                                </div>
+                               
+                                <div role="tabpanel" class="tab-pane fade" id="curricularm">
+                                    <h5>Licence</h5>
+                                    <p>LICENCE EN MANAGEMENT : ADMINISTRATION DES AFFAIRES</p>
+                                    <p>FINANCE</p>
+                                    <p>COMPTABILITÉ</p>
+
+                                    <h5>Master</h5>
+                                    <p>MARKETING DIGITAL</p>
+                                    <p>DATA SCIENCE</p>
+                                    <p>MANAGEMENT DE PROJET, SÉCURITÉ ET QUALITÉ</p>
+                                    <h5>Cycle ingénieur</h5>
+                                    <p> PRÉPARATOIRE INTÉGRÉ EN INFORMATIQUE</p>
+                                    <p>SYSTÈMES EMBARQUÉS</p>
+                                </div>
+                               
+                                <div role="tabpanel" class="tab-pane fade" id="reviews">
+                                    <!-- Blog Comment Wrappper-->
+                                    <div class="review-content">
+                                        <div class="five-star-rating">
+                                            <div class="rating_box_count">
+                                                <span class="five">5</span>
+                                                <ul class="list-unstyled">
+                                                    <li><i class="fas fa-star"></i></li>
+                                                    <li><i class="fas fa-star"></i></li>
+                                                    <li><i class="fas fa-star"></i></li>
+                                                    <li><i class="fas fa-star"></i></li>
+                                                    <li><i class="fas fa-star"></i></li>
+                                                </ul>
+                                                <span>8 Ratings</span>                  
+                                            </div>
+                                        </div>
+                                        <div class="rating-box">
+                                            <div class="detailed-rating">
+                                                <div class="stars">
+                                                    <div class="key">5 stars</div>
+                                                    <div class="bar">
+                                                        <div class="full_bar">
+                                                             <span style="width: 100%"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="value">8</div>
+                                                </div>
+    
+                                                <div class="stars">
+                                                    <div class="key">4 stars</div>
+                                                    <div class="bar">
+                                                        <div class="full_bar">
+                                                             <span style="width: 0%"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="value">0</div>
+                                                </div>
+    
+                                                <div class="stars">
+                                                    <div class="key">3 stars</div>
+                                                    <div class="bar">
+                                                        <div class="full_bar">
+                                                             <span style="width: 0%"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="value">0</div>
+                                                </div>
+                                                <div class="stars">
+                                                    <div class="key">2 stars</div>
+                                                    <div class="bar">
+                                                        <div class="full_bar">
+                                                             <span style="width: 0%"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="value">0</div>
+                                                </div>
+                                                <div class="stars">
+                                                    <div class="key">1 star</div>
+                                                    <div class="bar">
+                                                        <div class="full_bar">
+                                                            <span style="width: 0%"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="value">0</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                              
+    
+    
+                                    <div class="commnet-wrapper">
+                                         <div class="comment-list-items">
+                                            <div class="comment-list-wrapper">
+                                                <div class="comment-list">
+                                                    <div class="commnet_img">
+                                                        <img src="assets/images/team/team_2.jpg" alt="member img" class="img-fluid">
+                                                    </div>
+                                                    <div class="comment-text">
+                                                        <div class="author_info d-flex justify-content-between"> 
+                                                            <a href="#" class="author_name">Augustin</a> 
+                                                            <span>2 Days Ago</span>
+                                                        </div>
+                                                        <div class="rating">
+                                                            <ul class="rating d-flex justify-content-start">
+                                                                <li><i class="fas fa-star"></i></li>
+                                                                <li><i class="fas fa-star"></i></li>
+                                                                <li><i class="fas fa-star"></i></li>
+                                                                <li><i class="fas fa-star"></i></li>
+                                                                <li><i class="fas fa-star"></i></li>   
+                                                            </ul>  
+                                                        </div>   
+                                                        <p>You need to be sure there isn't anything embarrassing hidden in the repeat predefined chunks as necessary, making this the first true generator on the Internet.</p> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="comment-list-wrapper">
+                                                <div class="comment-list">
+                                                    <div class="commnet_img">
+                                                        <img src="assets/images/team/team_4.jpg" alt="member img" class="img-fluid">
+                                                    </div>
+                                                    <div class="comment-text">
+                                                        <div class="author_info d-flex justify-content-between"> 
+                                                            <a href="#" class="author_name">David Martin</a>
+                                                            <span>2 Days Ago</span> 
+                                                        </div>  
+                                                        <div class="rating">
+                                                            <ul class="rating d-flex justify-content-start">
+                                                                <li><i class="fas fa-star"></i></li>
+                                                                <li><i class="fas fa-star"></i></li>
+                                                                <li><i class="fas fa-star"></i></li>
+                                                                <li><i class="fas fa-star"></i></li>
+                                                                <li><i class="fas fa-star-half-alt"></i></li>   
+                                                            </ul>  
+                                                        </div>     
+                                                        <p>you need to be sure there isn't anything embarrassing hidden in the repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
+                                                    </div>                               
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div> <!--End Blog Siderbar Left-->
+    
+    
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 blog_wrapper_right ">
+                    <div class="blog-right-items">
+                        <div class="courses_features widget_single">
+                            <div class="items-title">
+                                <h3 class="title">Courses Features</h3>
+                            </div>
+                            <div class="features_items">
+                                <ul class="list-unstyled">
+                                    <li><a href="#" title=""><i class="flaticon-page"></i> Lessons </a><span>69</span></li>
+                                    <li><a href="#" title=""><i class="flaticon-eye-open"></i> Viewers</a><span>56</span></li>
+                                    <li><a href="#" title=""><i class="flaticon-clock-circular-outline"></i> Duration</a><span>5H</span></li>
+                                    <li><a href="#" title=""><i class="flaticon-padlock"></i> Prequisite</a><span>No</span></li>
+                                    <li><a href="#" title=""><i class="flaticon-diploma"></i> Certificate</a><span>Yes</span></li>                                
+                                    <li><a href="#" title=""><i class="flaticon-language"></i> Language</a><span>Eng</span></li>                                
+                                    <li><a href="#" title=""><i class="flaticon-thumbs-up-hand-symbol"></i> Skills</a><span>Any</span></li>                                
+                                    <li><a href="#" title=""><i class="flaticon-edit"></i> Assessments</a><span>Yes</span></li>
+                                </ul>
+                            </div>
+                            <img src="assets/images/shapes/testimonial_2_shpe_2.png" alt="" class="courses_feaures_shpe">
+                        </div>  
+    
+    
+    
+                       
+    
+                       
+                    </div>
+                </div> <!-- End Right Sidebar-->
+                
+            </div>
+        </div> 
+    </section><!-- ./ End  Blog Wrapper-->
+    
+    
+    
+    <!--Start Courses Area Section-->
+    <section class="popular_courses" id="related_courses_wrapper">
+        <div class="container"> 
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="title">
+                        <h2>Related Courses</h2>
+                    </div><!-- ends: .section-header -->
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <div id="related_courses" class="owlCarousel">
+                        <div class="single-courses">
+                            <div class="courses_banner_wrapper">
+                                <div class="courses_banner"><a href="#"><img src="assets/images/courses/courses_1.jpg" alt="" class="img-fluid"></a></div>
+                                <div class="purchase_price">
+                                    <a href="#" class="read_more-btn">$150</a>
+                                </div>
+                            </div>
+                            <div class="courses_info_wrapper">
+                                <div class="courses_title">
+                                    <h3><a href="#">Make Better Decisions</a></h3>
+                                    <div class="teachers_name">Teacher - <a href="#" title="">Jhonthan Smith</a></div>
+                                </div>
+                                <div class="courses_info">
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-user"></i>180 Days</li>
+                                        <li><i class="fas fa-calendar-alt"></i>30 Students</li>
+                                    </ul>
+                                    <a href="#" class="cart_btn">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div><!-- Ends: .single courses -->
+    
+    
+                        <div class="single-courses">
+                            <div class="courses_banner_wrapper">
+                                <div class="courses_banner"><a href="#"><img src="assets/images/courses/courses_2.jpg" alt="" class="img-fluid"></a></div>
+                                <div class="purchase_price">
+                                    <a href="#" class="read_more-btn">Free</a>
+                                </div>
+                            </div>
+                            <div class="courses_info_wrapper">
+                                <div class="courses_title">
+                                    <h3><a href="#">How To Be A Speaker</a></h3>
+                                    <div class="teachers_name">Teacher - <a href="#" title="">Denise Wood</a></div>
+                                </div>
+                                <div class="courses_info">
+                                    <ul class="list-unstyled">
+                                        <li><i class="fa fa-user"></i> 180 Days</li>
+                                        <li><i class="fa fa-comment"></i>50 Students</li>
+                                    </ul>
+                                    <a href="#" class="cart_btn">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div><!-- Ends: .single courses -->
+    
+                        <div class="single-courses">
+                            <div class="courses_banner_wrapper">
+                                <div class="courses_banner"><a href="#"><img src="assets/images/courses/courses_3.jpg" alt="" class="img-fluid"></a></div>
+                                <div class="purchase_price">
+                                    <a href="#" class="read_more-btn">120$</a>
+                                </div>
+                            </div>
+                            <div class="courses_info_wrapper">
+                                <div class="courses_title">
+                                    <h3><a href="#">Network Introductions</a></h3>
+                                    <div class="teachers_name">Teacher - <a href="#" title="">Preston Marshall</a></div>
+                                </div>
+                                <div class="courses_info">
+                                    <ul class="list-unstyled">
+                                        <li><i class="fa fa-user"></i> 140 Days</li>
+                                        <li><i class="fa fa-comment"></i>60 Students</li>
+                                    </ul>
+                                    <a href="#" class="cart_btn">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>                     
+                        <div class="single-courses">
+                            <div class="courses_banner_wrapper">
+                                <div class="courses_banner"><a href="#"><img src="assets/images/courses/courses_3.jpg" alt="" class="img-fluid"></a></div>
+                                <div class="purchase_price">
+                                    <a href="#" class="read_more-btn">120$</a>
+                                </div>
+                            </div>
+                            <div class="courses_info_wrapper">
+                                <div class="courses_title">
+                                    <h3><a href="#">Network Introductions</a></h3>
+                                    <div class="teachers_name">Teacher - <a href="#" title="">Preston Marshall</a></div>
+                                </div>
+                                <div class="courses_info">
+                                    <ul class="list-unstyled">
+                                        <li><i class="fa fa-user"></i> 140 Days</li>
+                                        <li><i class="fa fa-comment"></i>60 Students</li>
+                                    </ul>
+                                    <a href="#" class="cart_btn">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>                     
+                        <div class="single-courses">
+                            <div class="courses_banner_wrapper">
+                                <div class="courses_banner"><a href="#"><img src="assets/images/courses/courses_3.jpg" alt="" class="img-fluid"></a></div>
+                                <div class="purchase_price">
+                                    <a href="#" class="read_more-btn">120$</a>
+                                </div>
+                            </div>
+                            <div class="courses_info_wrapper">
+                                <div class="courses_title">
+                                    <h3><a href="#">Network Introductions</a></h3>
+                                    <div class="teachers_name">Teacher - <a href="#" title="">Preston Marshall</a></div>
+                                </div>
+                                <div class="courses_info">
+                                    <ul class="list-unstyled">
+                                        <li><i class="fa fa-user"></i> 140 Days</li>
+                                        <li><i class="fa fa-comment"></i>60 Students</li>
+                                    </ul>
+                                    <a href="#" class="cart_btn">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>                     
+                        <div class="single-courses">
+                            <div class="courses_banner_wrapper">
+                                <div class="courses_banner"><a href="#"><img src="assets/images/courses/courses_3.jpg" alt="" class="img-fluid"></a></div>
+                                <div class="purchase_price">
+                                    <a href="#" class="read_more-btn">120$</a>
+                                </div>
+                            </div>
+                            <div class="courses_info_wrapper">
+                                <div class="courses_title">
+                                    <h3><a href="#">Network Introductions</a></h3>
+                                    <div class="teachers_name">Teacher - <a href="#" title="">Preston Marshall</a></div>
+                                </div>
+                                <div class="courses_info">
+                                    <ul class="list-unstyled">
+                                        <li><i class="fa fa-user"></i> 140 Days</li>
+                                        <li><i class="fa fa-comment"></i>60 Students</li>
+                                    </ul>
+                                    <a href="#" class="cart_btn">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>    
+                    </div><!-- Ends: .single courses -->
+                </div><!-- Ends: . -->                                       
+            </div>
+    
+        </div>
+    </section><!-- ./ End Courses Area section -->
+    
+    
+    <app-footer></app-footer>
